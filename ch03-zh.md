@@ -45,7 +45,7 @@ const checkAge = (age) => {
 
 在非纯函数部分，`checkAge` 依赖于可变变量 `minimum` 来确定结果。换句话说，它依赖于系统状态，这令人失望，因为它引入了外部环境，增加了[认知负荷](https://en.wikipedia.org/wiki/Cognitive_load)。
 
-在这个例子中，这看起来可能不算什么，但这种对状态的依赖是系统复杂性的最大贡献者之一 (http://curtclifton.net/papers/MoseleyMarks06a.pdf)。这个 `checkAge` 函数可能会根据输入之外的因素返回不同的结果，这不仅使其失去了纯函数的资格，而且每次我们推理软件时都会让我们的思维陷入困境。
+在这个例子中，这看起来可能不算什么，但这种对状态的依赖是系统复杂性的最大贡献者之一 (http://curtclifton.net/papers/MoseleyMarks06a.pdf)。 这个 `checkAge` 函数可能会根据输入之外的因素返回不同的结果，这不仅使其失去了纯函数的资格，而且每次我们推理软件时都会让我们的思维陷入困境。
 
 另一方面，它的纯函数形式是完全自给自足的。我们也可以让 `minimum` 成为不可变的（immutable），这保留了纯粹性，因为状态永远不会改变。要做到这一点，我们必须创建一个对象来冻结它。
 

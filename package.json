@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "description": "The Mostly Adequate Guide to Functional Programming",
   "dependencies": {
-    "gitbook-plugin-exercises": "git+https://github.com/MostlyAdequate/plugin-exercises.git",
-    "gitbook-plugin-include-codeblock": "^3.2.2"
+    "gitbook-plugin-exercises": "^3.0.0",
+    "gitbook-plugin-include-codeblock": "^3.2.2",
+    "graceful-fs": "^4.2.11"
   },
   "devDependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "honkit": "^4.0.8"
   },
   "scripts": {
-    "setup": "$(npm bin)/gitbook install",
-    "start": "$(npm bin)/gitbook serve",
+    "start": "honkit serve",
     "generate-summary": "perl -n .generate-summary.pl ch*-zh.md appendix_*-zh.md > SUMMARY.md",
-    "generate-epub": "gitbook epub",
-    "generate-pdf": "gitbook pdf"
+    "generate-epub": "honkit epub",
+    "generate-pdf": "honkit pdf"
   },
   "repository": {
     "type": "git",

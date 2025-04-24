@@ -1,5 +1,3 @@
-好的，这是 README 文件的翻译：
-
 [![封面](images/cover.png)](SUMMARY.md)
 
 ## 关于本书
